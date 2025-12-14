@@ -23,13 +23,13 @@ A responsive, modern portfolio website built from scratch to showcase my softwar
 This portfolio highlights my work in:
 1.  **BitTorrent Client** - A custom protocol implementation using Python & raw sockets.
 2.  **Anime ML Recommender** - Content-based recommendation engine using Pandas & Streamlit.
-3.  **E-commerce Automation** - Automated testing suite for Dr.Max pharmacy using Selenium & pytest.
+3.  **E-commerce Test Automation Suite** - Automated testing suite for Dr.Max pharmacy using Selenium & pytest.
 
 ## 🚀 How to Run Locally
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/AlexeiLuchian/alexei-luchian-portfolio](https://github.com/AlexeiLuchian/alexei-luchian-portfolio)
+    git clone https://github.com/AlexeiLuchian/alexei-luchian-portfolio
     ```
 2.  Navigate to the project folder.
 3.  Open `index.html` in your web browser.
