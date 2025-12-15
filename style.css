@@ -5,8 +5,12 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 /* Body Page Style */
@@ -15,7 +19,6 @@ body {
     background: #0a0a0a;
     color: #e0e0e0;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 /* --- NAVIGATION BAR --- */
@@ -397,3 +400,75 @@ footer {
 }
 
 .skill-card, .project-card { transition-delay: 0.1s; }
+
+/* --- MOBILE RESPONSIVENESS --- */
+
+@media screen and (max-width: 768) {
+
+    .nav {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+        background: rgba(10, 10, 10, 0.95);
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding-top: 120px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .text-gradient {
+        display: inline-block;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .skill-card, .project-card {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .project-card, .skill-card {
+        max-width: 100%;
+    }
+
+    .contact-box {
+        padding: 2rem 1rem;
+        width: 100%;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+
+    .social-links a {
+        font-size: 1.5rem;
+    }
+
+    .email-button {
+        padding: 0.8rem 2rem;
+        width: 80%;
+    }
+}
