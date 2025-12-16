@@ -21,7 +21,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-const elementsToAnimate = document.querySelectorAll('.section-title, .skill-card, .project-card, contact-box');
+const elementsToAnimate = document.querySelectorAll('.section-title, .skill-card, .project-card, contact-box, contact-box p');
 
 elementsToAnimate.forEach( el => {
     el.classList.add('hidden');
