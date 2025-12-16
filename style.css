@@ -420,7 +420,7 @@ footer {
     }
 
     .hero {
-        padding-top: 120px;
+        padding-top: 70px;
     }
 
     .hero-content h1 {
@@ -447,7 +447,7 @@ footer {
 
     .skill-card, .project-card {
         grid-template-columns: 1fr;
-        padding: 0 1rem;
+        padding: 2.5rem 1.5rem;
     }
 
     .project-card, .skill-card {
@@ -470,5 +470,9 @@ footer {
     .email-button {
         padding: 0.8rem 2rem;
         width: 80%;
+    }
+
+    .project-thumb {
+        height: 250px;
     }
 }
