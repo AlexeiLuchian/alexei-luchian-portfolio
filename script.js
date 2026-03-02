@@ -23,14 +23,10 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-<<<<<<< HEAD
 // Fixed: added missing '.' before 'contact-box'
 const elementsToAnimate = document.querySelectorAll(
     '.section-title, .skill-card, .project-card, .contact-box, .contact-box p'
 );
-=======
-const elementsToAnimate = document.querySelectorAll('.section-title, .skill-card, .project-card, .contact-box');
->>>>>>> e5bb20f32b972b6f9f94aa9d3d433063f1e066a1
 
 elementsToAnimate.forEach(el => {
     el.classList.add('hidden');
