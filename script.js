@@ -1,3 +1,4 @@
+// Nav shrink on scroll
 const nav = document.querySelector('.nav');
 
 window.addEventListener('scroll', () => {
@@ -8,9 +9,10 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Scroll-triggered reveal animations
 const observerOptions = {
-    threshold: 0.2
-}
+    threshold: 0.15
+};
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -21,9 +23,33 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-const elementsToAnimate = document.querySelectorAll('.section-title, .skill-card, .project-card, contact-box, .contact-box p');
+// Fixed: added missing '.' before 'contact-box'
+const elementsToAnimate = document.querySelectorAll(
+    '.section-title, .skill-card, .project-card, .contact-box, .contact-box p'
+);
 
-elementsToAnimate.forEach( el => {
+elementsToAnimate.forEach(el => {
     el.classList.add('hidden');
     observer.observe(el);
-})
+});
+
+// Smooth active link highlight on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+});
