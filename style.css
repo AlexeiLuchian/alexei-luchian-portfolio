@@ -401,15 +401,22 @@ footer {
 .hidden {
     opacity: 0;
     transform: translateY(50px);
-    transition: all 1s ease-out;
 }
 
 .visible {
     opacity: 1;
     transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.skill-card, .project-card { transition-delay: 0.1s; }
+.skill-card.hidden, .project-card.hidden {
+    transition: none;
+}
+
+.skill-card.visible, .project-card.visible {
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition-delay: 0.15s;
+}
 
 /* --- MOBILE RESPONSIVENESS --- */
 
